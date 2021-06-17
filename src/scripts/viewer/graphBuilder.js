@@ -1,7 +1,7 @@
 /**
  * Creates a graph for a give package name
  */
-var createGraphBuilder = require('npmgraphbuilder');
+var createGraphBuilder = require('pubgraphbuilder');
 var registryUrl = require('../config.js').registryUrl;
 
 module.exports = buildGraph;
@@ -14,7 +14,7 @@ function buildGraph(pkgName, version, http, changed) {
   }, registryUrl);
 
   graphBuilder.notifyProgress(changed);
-  var promise = graphBuilder.createNpmDependenciesGraph(pkgName, graph, version);
+  var promise = graphBuilder.createPubDependenciesGraph(pkgName, graph, version);
 
   return {
     graph: graph,

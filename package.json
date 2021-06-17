@@ -1,7 +1,7 @@
 {
-  "name": "npmgraph.an",
+  "name": "pubgraph",
   "version": "0.0.4",
-  "description": "Visualization of npm dependencies",
+  "description": "Visualization of pub dependencies",
   "main": "main.js",
   "scripts": {
     "start": "gulp --port 31337",
@@ -15,26 +15,29 @@
     ]
   },
   "keywords": [
-    "npm",
-    "ngraph"
+    "pub",
+    "ngraph",
+    "flutter",
+    "dart"
   ],
-  "author": "Andrei Kashcha",
+  "author": "Viren Khatri",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anvaka/npmgraph.an"
+    "url": "git+https://github.com/werainkhatri/pubgraph.git"
   },
   "devDependencies": {
+    "angular-cli": "^1.0.0-beta.28.3",
     "brfs": "^1.1.2",
     "browserify": "^3.33.0",
     "connect-livereload": "^0.3.2",
     "express": "^3.5.1",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.2.0",
     "gulp-less": "^1.2.3",
     "gulp-util": "^2.2.14",
     "tiny-lr": "0.0.5",
-    "yargs": "^1.2.1",
-    "gulp": "^4.0.2"
+    "yargs": "^1.2.1"
   },
   "dependencies": {
     "an": "0.0.7",
@@ -45,11 +48,14 @@
     "ngraph.merge": "0.0.1",
     "ngraph.svg": "0.0.15",
     "ngraph.three": "0.0.11",
-    "npm-package-arg": "^4.2.0",
-    "npmgraphbuilder": "2.2.0",
+    "pubgraphbuilder": "0.1.2",
     "simplesvg": "0.0.10",
     "three2stl": "0.0.1",
     "twitter-bootstrap-3.0.0": "^3.0.0",
     "typeahead.an": "~0.0.1"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/werainkhatri/pubgraph/issues"
+  },
+  "homepage": "https://github.com/werainkhatri/pubgraph#readme"
 }

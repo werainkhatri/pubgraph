@@ -10,6 +10,7 @@ function infoController($scope, $http, $q, $location, $routeParams) {
 
   $scope.highlightNodes = function(record, e) {
     e.preventDefault();
+    console.log(record);
 
     $scope.$root.$broadcast('highlight-node', {
       color: '#52CCE3',
@@ -21,12 +22,12 @@ function infoController($scope, $http, $q, $location, $routeParams) {
     if (selectedLicense) selectedLicense.selected = true;
 
     $scope.responsiveOpen = false;
-    if (e && document.body.client.width < 630) {
-      // On small screens this scrolls package Info/graph info into view.
-      // TODO: Get rid of this code.
-      var container = document.querySelector('.infoBox');
-      if (container) container.scrollTop = 0;
-    }
+    // if (e && document.body.client.width < 630) {
+    //   // On small screens this scrolls package Info/graph info into view.
+    //   // TODO: Get rid of this code.
+    //   var container = document.querySelector('.infoBox');
+    //   if (container) container.scrollTop = 0;
+    // }
   };
 
   $scope.hideInfoBox = function (e) {
@@ -69,7 +70,7 @@ function infoController($scope, $http, $q, $location, $routeParams) {
   }
 
   function getSelectedPackageName() {
-    return $scope.selectedPackage && $scope.selectedPackage.name;
+    return $scope.selectedPackage && $scope.selectedPackage.pubspec.name;
   }
 
   function switchInfoMode(mode, e) {
@@ -82,7 +83,7 @@ function infoController($scope, $http, $q, $location, $routeParams) {
 
   function selectNode(node) {
     var data = node.data;
-    if (data && !('name' in data)) {
+    if (data && !('version' in data)) {
       data = {
         id: node.id,
         remote: true
@@ -95,9 +96,9 @@ function infoController($scope, $http, $q, $location, $routeParams) {
       $scope.maintainers = data.maintainers.map(toGravatar);
     }
 
-    if (!data.remote) {
+    // if (!data.remote) {
       updateVersions(getSelectedPackageName());
-    }
+    // }
   }
 
   function graphLoaded() {
@@ -106,8 +107,8 @@ function infoController($scope, $http, $q, $location, $routeParams) {
     $scope.nodesCount = graph.getNodesCount();
 
     $scope.graphLoaded = true;
-    $scope.allMaintainers = require('./maintainers')(graph);
-    $scope.allLicenses = require('./licenses')(graph);
+    // $scope.allMaintainers = require('./maintainers')(graph);
+    // $scope.allLicenses = require('./licenses')(graph);
     $scope.allNames = require('./names')(graph);
 
     selectNode(graph.root);
