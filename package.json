@@ -52,8 +52,7 @@
     "pubgraphbuilder": "0.1.2",
     "simplesvg": "0.0.10",
     "three2stl": "0.0.1",
-    "twitter-bootstrap-3.0.0": "^3.0.0",
-    "typeahead.an": "~0.0.1"
+    "twitter-bootstrap-3.0.0": "^3.0.0"
   },
   "bugs": {
     "url": "https://github.com/werainkhatri/pubgraph/issues"

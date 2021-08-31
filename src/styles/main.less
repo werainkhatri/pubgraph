@@ -7,32 +7,6 @@ navbar {
   top: 0;
 }
 
-.typeahead-container {
-  ul {
-    width: 288px;
-    overflow: hidden;
-    left: 0;
-    border: 0;
-    background-color: @scene-background;
-    border-radius: 0;
-    box-shadow: none;
-    li {
-      a {
-        white-space: normal;
-        color: @primary-color;
-        padding: 3px 12px;
-        cursor: pointer;
-      }
-      &.active {
-        a, a:hover, a:focus {
-          background-color: transparent;
-          color: @link-color;
-        }
-      }
-    }
-  }
-}
-
 .search {
   width: 288px;
   margin: 12px;
@@ -314,9 +288,6 @@ a.hide-info-box {
     right: 0;
     form.search {
       width: auto;
-      .typeahead-container ul {
-        width: auto;
-      }
     }
   }
 

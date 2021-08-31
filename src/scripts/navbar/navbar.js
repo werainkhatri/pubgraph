@@ -1,9 +1,8 @@
 /**
  * This file represent navbar directive. Navbar allows users to search npm
- * for packages with typeahead functionality
+ * for packages
  */
 require('./controller');
-require('typeahead.an');
 
 module.exports = require('an').directive(navbar);
 

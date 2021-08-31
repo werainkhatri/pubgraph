@@ -1,21 +1,9 @@
-<form class="search" ng-controller='navbarController' role="search">
-  <div class="input-group typeahead-container">
-    <!-- <input  type="text" autofocus
-            ng-model='selectedPackage'
-            typeahead="pkg for pkg in getPackages($viewValue)"
-            typeahead-input-formatter="formatPkg($model)"
-            typeahead-on-select='viewPackage($model)'
-            typeahead-template-url="packageMatch.html"
-            class="form-control no-shadow"
-            placeholder="npm package (e.g. browserify)"> -->
-      <script type="text/ng-template" id="packageMatch.html">
-        <a>
-          <strong>{{match.model.id}}</strong>
-          <small>{{match.model.value.description}}</small>
-        </a>
-      </script>
-    <!-- <span class="input-group-btn">
-      <button class="btn" type="button">show</button>
-    </span> -->
+<script src="navbar.js"></script>
+<form class="search" ng-controller='navbarController' role="search" ng-submit="viewPackage()">
+  <div class="input-group">
+    <input id="package" type="text" autofocus class="form-control no-shadow" placeholder="pub package (e.g. http)">
+    <span class="input-group-btn">
+      <button class="btn" type="submit">show</button>
+    </span>
   </div>
 </form>
