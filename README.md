@@ -41,10 +41,6 @@ npm start
 
 This should start local dev server and serve Pub visualization.
 
-# Current Roadblocks
-
-- pub.dev api doesn't allow cross-origin requests, so this will work only when hosted locally.
-
 # license
 
 MIT
