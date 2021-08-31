@@ -5,16 +5,16 @@ Visualization of Pub shows dependency graph of a pub package.
 # Screenshots
 
 Default view:
-![Default view](https://raw.githubusercontent.com/anvaka/npmgraph.an/master/images/default_view.png)
+![Default view](https://raw.githubusercontent.com/werainkhatri/pubgraph/master/images/default_view.png)
 
 
 Responsive view:
 
-![Responsive view](https://raw.githubusercontent.com/anvaka/npmgraph.an/master/images/responsive_view.png)
+![Responsive view](https://raw.githubusercontent.com/werainkhatri/pubgraph/master/images/responsive_view.png)
 
 
 3d view:
-![3d view](https://raw.githubusercontent.com/anvaka/npmgraph.an/master/images/3d_view.png)
+![3d view](https://raw.githubusercontent.com/werainkhatri/pubgraph/master/images/3d_view.png)
 
 # How it's done?
 
@@ -39,8 +39,12 @@ npm i
 npm start
 ```
 
-This should start local dev server and serve Pub visualization.
+This should start local dev server and serve Pub Visualization.
 
 # license
 
 MIT
+
+# Special Thanks
+
+To [anvaka](https://github.com/anvaka/) for making the original project ([npmgraph](https://github.com/anvaka/npmgraph.an)) open source.
