@@ -20,5 +20,28 @@
 
     <script type="text/javascript" charset="utf-8" src='external.min.js'></script>
     <script type="text/javascript" charset="utf-8" src='bundle.js'></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyC-hjxk44bYT0CrNrixDOWJyySnlk-0Ppo",
+        authDomain: "pubdepgraph.firebaseapp.com",
+        projectId: "pubdepgraph",
+        storageBucket: "pubdepgraph.appspot.com",
+        messagingSenderId: "557123515200",
+        appId: "1:557123515200:web:617fa8c24ede454d1980a5",
+        measurementId: "G-HWKZD1H3NW"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </body>
 </html>
