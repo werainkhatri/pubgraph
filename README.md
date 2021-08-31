@@ -1,6 +1,6 @@
-# npmgraph.an
+# pubgraph
 
-[Visualization of npm](https://npm.anvaka.com) shows dependency graph of an npm package.
+Visualization of Pub shows dependency graph of a pub package.
 
 # Screenshots
 
@@ -18,37 +18,32 @@ Responsive view:
 
 # How it's done?
 
-[angular.js](https://angularjs.org/) + [browserify](https://browserify.org/) + [ngraph](https://github.com/anvaka/ngraph) => [gulp](https://gulpjs.com/) => https://npm.anvaka.com/
+[angular.js](https://angularjs.org/) + [browserify](https://browserify.org/) + [ngraph](https://github.com/anvaka/ngraph) => [gulp](https://gulpjs.com/) => https://werainkhatri.github.io/pubgraph/
 
 The website is entirely hosted on [GitHub Pages](https://pages.github.com/).
 
-The npm data is coming from `registry.npmjs.cf` and is collected by [npmgraphbuilder](https://github.com/anvaka/npmgraphbuilder) at real time.
+The pub data is coming from https://pub.dev/api/packages/ and is collected by [pubgraphbuilder](https://github.com/werainkhatri/pubgraphbuilder) in real time.
 
 For CSS styles I'm using [twitter bootstrap](https://getbootstrap.com/css/) and [less](https://lesscss.org/).
 
 # npm rocks
 
-All modules of this application are provided by [npm](https://github.com/anvaka/npmgraph.an/blob/master/package.json). 
+All modules of this application are provided by [npm](https://github.com/werainkhatri/pubgraph/blob/master/package.json). 
 
 # Local development
 
 ```
-git clone https://github.com/anvaka/npmgraph.an.git
-cd npmgraph.an
+git clone https://github.com/werainkhatri/pubgraph.git
+cd pubgraph
 npm i
 npm start
 ```
 
-This should start local dev server and serve npm visualization.
+This should start local dev server and serve Pub visualization.
 
-# Other projects
+# Current Roadblocks
 
-Here I will try to list other projects that visualize npm. 
-
-* https://npm.broofa.com/ - renders dependency graph with direct acyclic graph layout alrogirthm.
-* [galaxy](https://anvaka.github.io/pm/#/galaxy/npm?cx=-1345&cy=-7006&cz=-6553&lx=0.6217&ly=-0.6459&lz=0.3098&lw=0.3168&ml=150&s=1.75&l=1&v=2017-11-22T00-00-00Z) - 3D gallaxy simulator of npm packages.
-
-If you have other projects that you want to see here, please send me a pull request or a hint.
+- pub.dev api doesn't allow cross-origin requests, so this will work only when hosted locally.
 
 # license
 
