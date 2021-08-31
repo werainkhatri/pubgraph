@@ -1,5 +1,6 @@
 lib-cov
 dist
+.publish
 *.seed
 *.log
 *.csv
