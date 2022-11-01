@@ -1,0 +1,40 @@
+name: Angular Build
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build Web
+    env:
+      my_secret: ${{secrets.COMMIT_SECRET}}
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Build
+        run: |
+          npm install
+          rm -rf dist || exit 0;
+          mkdir dist;
+          npm run build
+          cd dist
+          git init
+          git config --global user.email werainkhatri.work@gmail.com
+          git config --global user.name werainkhatri
+          
+          git remote add origin https://${{secrets.COMMIT_SECRET}}@github.com/werainkhatri/pubgraph.git
+          
+          git checkout -b web
+          git add --all
+          git commit -m "release build"
+          git push origin web -f
